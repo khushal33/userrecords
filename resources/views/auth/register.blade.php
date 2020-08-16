@@ -73,11 +73,11 @@
                             <label for="checkbox" class="col-md-4 col-form-label text-md-right">{{ __('Select language:') }}</label>
 
                             <div class="col-md-3">PHP:
-                                <input id="checkbox" type="checkbox" class="form-control" name="checkbox[]" value="PHP" autocomplete="NA">C#:
-                                <input id="checkbox" type="checkbox" class="form-control" name="checkbox[]" value="C#"  autocomplete="NA">VB.Net:
-                                <input id="checkbox" type="checkbox" class="form-control" name="checkbox[]" value="VB.Net"  autocomplete="NA">Java:
-                                <input id="checkbox" type="checkbox" class="form-control" name="checkbox[]" value="Java" autocomplete="NA">
-
+                                <input id="checkbox" type="checkbox" class="form-control" name="checkbox[0]" value="PHP" autocomplete="NA">C#:
+                                <input id="checkbox" type="checkbox" class="form-control" name="checkbox[1]" value="C#"  autocomplete="NA">VB.Net:
+                                <input id="checkbox" type="checkbox" class="form-control" name="checkbox[2]" value="VB.Net"  autocomplete="NA">Java:
+                                <input id="checkbox" type="checkbox" class="form-control" name="checkbox[3]" value="Java" autocomplete="NA">
+                                    
                                 @error('checkbox')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -85,6 +85,8 @@
                                 @enderror
                             </div>
                         </div> 
+                        
+                        
                         
                         
 

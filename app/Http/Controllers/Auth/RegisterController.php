@@ -76,19 +76,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $checkb = $data['checkbox'];
-        $chk="";
-        foreach($checkb as $chk1){
-            $chk.= $chk1.",";
-        }
-      
+        
+        $check=$data['checkbox'];
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
              'phone' => $data['phone'],
              'date' => $data['date'],
 
-            'checkbox' => $data['$chk'],
+            'checkbox' => implode(',',$check),
             
             'password' => Hash::make($data['password']),
         ]);
